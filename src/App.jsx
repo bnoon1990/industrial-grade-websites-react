@@ -9,7 +9,7 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <>
+    <div className="xl:w-2/3 mx-auto bg-white">
       <Header></Header>
       <Feature
         headline='Heavy duty'
@@ -28,7 +28,7 @@ function App() {
         blurb='Fill out our quick form and we will get back to you with a completely free assessment'
         form={<Form/>}></Feature>
       <Footer></Footer>
-    </>
+    </div>
   )
 }
 
