@@ -1,0 +1,24 @@
+{
+  "name": "igw-server",
+  "version": "1.0.0",
+  "description": "Basic backend for industrialgradewebsites.co.uk",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "nodemailer": "^6.9.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bnoon1990/industrial-grade-websites-react.git"
+  },
+  "author": "Ben Noon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bnoon1990/industrial-grade-websites-react/issues"
+  },
+  "homepage": "https://github.com/bnoon1990/industrial-grade-websites-react#readme"
+}
