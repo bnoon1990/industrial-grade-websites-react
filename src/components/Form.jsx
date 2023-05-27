@@ -4,16 +4,12 @@ import { useForm, FormProvider } from 'react-hook-form';
 const Form = () => {
   const { methods, register, handleSubmit, watch, formState: { errors }} = useForm();
   const [status, setStatus] = useState("Submit");
+  const API_ENDPOINT = import.meta.env.VITE_API_ENDPOINT;
+
   const submitForm = async (data, e) => {
     e.preventDefault();
     setStatus("Sending...");
-    // const { name, email, source } = e.target.elements;
-    // let details = {
-    //   name: name.value,
-    //   email: email.value,
-    //   source: source.value,
-    // };
-    let response = await fetch("http://localhost:5000/contact", {
+    let response = await fetch(`${API_ENDPOINT}/contact`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json;charset=utf-8",
