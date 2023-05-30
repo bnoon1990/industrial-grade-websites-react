@@ -5,12 +5,8 @@ services:
       context: ./client
     ports:
       - 3000:80
-    volumes:
-      - ./web:/web
   backend_srv:
     build: 
       context: ./server  
     ports:
       - 5000:5000
-    volumes:
-      - ./api:/api
