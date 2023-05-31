@@ -1,3 +1,11 @@
+RewriteEngine On
+
+# Redirect to HTTPS if not already using HTTPS
 RewriteCond %{HTTPS} !=on
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-REWRITERULE ^(.*)$ http://dockerwebsitefrontend/$1 [P]
+
+# Redirect URLs ending in /contact to the Docker website backend
+RewriteRule ^(.*)contact/?$ http://dockerwebsitebackend/contact [P,L]
+
+# Proxy requests to Docker website frontend
+RewriteRule ^(.*)$ http://dockerwebsitefrontend/$1 [P]
